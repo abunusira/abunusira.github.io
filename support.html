@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>صفحة الدعم | Abu Nusira Apps</title>
+
+<style>
+  body {
+    font-family: "Cairo", sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    margin: 0; padding: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 24px;
+  }
+  .card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  h1, h2 { margin-top: 0; }
+  .lang-btn {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    float: left;
+  }
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+</style>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll("[data-lang]").forEach(function(el) {
+    el.style.display = (el.getAttribute("data-lang") === lang) ? "block" : "none";
+  });
+  document.documentElement.lang = lang === "ar" ? "ar" : "en";
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+}
+</script>
+</head>
+
+<body onload="setLang('ar')">
+<div class="container">
+
+<button class="lang-btn" onclick="setLang('en')">English</button>
+<button class="lang-btn" style="margin-right:10px" onclick="setLang('ar')">عربي</button>
+
+<br><br>
+
+<!-- ================== Arabic ================== -->
+<div data-lang="ar">
+  <div class="card">
+    <h1>الدعم الفني – تطبيقات أبو نصيرة</h1>
+    <p>مرحبًا بك! نحن هنا لمساعدتك في أي مشكلة تواجهك داخل التطبيق.</p>
+  </div>
+
+  <div class="card">
+    <h2>طرق التواصل</h2>
+    <p>📧 البريد الإلكتروني للدعم:  
+      <a href="mailto:support@abunusira.com">support@abunusira.com</a>
+    </p>
+    <p>📱 واتساب (اختياري):  
+      <a href="https://wa.me/966000000000">+966 00 000 0000</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>سياسة الخصوصية</h2>
+    <p>
+      لعرض سياسة الخصوصية الخاصة بتطبيقاتنا، يرجى زيارة الرابط التالي:
+    </p>
+    <p><a href="https://abunusira.github.io/gold-wallet-privacy/">اضغط هنا لفتح سياسة الخصوصية</a></p>
+  </div>
+
+  <div class="card">
+    <h2>المشاكل الشائعة</h2>
+    <ul>
+      <li>مشكلة في تسجيل الدخول</li>
+      <li>عدم وصول الإشعارات</li>
+      <li>مشاكل الدفع أو الاشتراك</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================== English ================== -->
+<div data-lang="en">
+  <div class="card">
+    <h1>Support – Abu Nusira Apps</h1>
+    <p>Welcome! We are here to help you with any issue you face within the app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact Methods</h2>
+    <p>Email:  
+      <a href="mailto:support@abunusira.com">support@abunusira.com</a>
+    </p>
+    <p>WhatsApp (optional):  
+      <a href="https://wa.me/966000000000">+966 00 000 0000</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Privacy Policy</h2>
+    <p>
+      You can access our privacy policy via this link:
+    </p>
+    <p><a href="https://abunusira.github.io/gold-wallet-privacy/">Open Privacy Policy</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Common Issues</h2>
+    <ul>
+      <li>Login issues</li>
+      <li>Notifications not working</li>
+      <li>Payment or subscription problems</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
